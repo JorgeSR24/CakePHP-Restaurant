@@ -118,9 +118,9 @@ class PedidosController extends AppController
         }
 
         if ($this->Pedido->delete($id)) {
-            $this->Flash->success(__('El pedido ha sido eliminado.'));
+            $this->Flash->success(__('El pedido ha sido eliminado.'), array('class' => 'alert alert-success'));
             return $this->redirect(array('action' => 'index'));
         }
-        $this->Flash->error(__('No se pudo eliminar el pedido. Por favor, inténtalo de nuevo.'));
+        $this->Flash->error(__('No se pudo eliminar el pedido. Por favor, inténtalo de nuevo.'), array('class' => 'alert alert-danger'));
     }
 }
