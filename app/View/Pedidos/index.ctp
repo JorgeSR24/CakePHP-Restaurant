@@ -62,6 +62,13 @@ if (count($pedidos) > 0): ?>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col col-sm-12">
+            <?php echo $this->Form->postLink('Quitar todos los Pedidos', array('action' => 'deleteAll'), array('class' => 'btn btn-danger', 'confirm' => '¿Estás seguro de que quieres eliminar todos los pedidos?')); ?>
+
+        </div>
+    </div>
+
   
 
 <?php endif; ?>

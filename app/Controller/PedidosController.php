@@ -123,4 +123,16 @@ class PedidosController extends AppController
         }
         $this->Flash->error(__('No se pudo eliminar el pedido. Por favor, inténtalo de nuevo.'), array('class' => 'alert alert-danger'));
     }
+
+    public function deleteAll(){
+        if (!$this->request->is('post')) {
+            throw new MethodNotAllowedException();
+        }
+
+        if ($this->Pedido->deleteAll(true)) {
+            $this->Flash->success(__('Todos los pedidos han sido eliminados.'), array('class' => 'alert alert-success'));
+            return $this->redirect(array('action' => 'index'));
+        }
+        $this->Flash->error(__('No se pudieron eliminar los pedidos. Por favor, inténtalo de nuevo.'), array('class' => 'alert alert-danger'));
+    }
 }
