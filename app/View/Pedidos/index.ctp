@@ -69,6 +69,15 @@ if (count($pedidos) > 0): ?>
         </div>
     </div>
 
+    <div class="row mt-3">
+        <div class="col col-sm-12">
+           <?php 
+            echo $this->Form->postLink('Procesar Pedido', 
+                array('controller' => 'Ordens', 'action' => 'add'), 
+                array('class' => 'btn btn-primary')); ?>
+        </div>
+    </div>
+
   
 
 <?php endif; ?>

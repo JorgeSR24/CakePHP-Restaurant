@@ -9,6 +9,13 @@ class Mesa extends AppModel {
         )
     );
 
+    public $hasMany = array(
+        'Orden' => array(
+            'foreignKey' => 'mesa_id',
+            'dependent' => false
+        )
+    );
+
     public $validate = array(
         'codigo' => array(
             'notEmpty' => array(
