@@ -3,6 +3,8 @@
 
 class Mesa extends AppModel {  
 
+public $displayField = 'codigo';
+
     public $belongsTo = array(
         'Mesero' => array(
             'foreignKey' => 'mesero_id'

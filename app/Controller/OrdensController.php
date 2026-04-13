@@ -5,6 +5,11 @@ class OrdensController extends AppController
     public $components = array('Paginator', 'Session');
     public $helpers = array('Html', 'Form');
 
+    public $paginate = array(
+        'limit' => 10,
+        'order' => array('Orden.id' => 'desc')
+    );
+
     public function index()
     {
         $this->Orden->recursive = 0;
@@ -27,6 +32,13 @@ class OrdensController extends AppController
         $mesas = $this->Orden->Mesa->find('list');
         $this->set(compact('ordensItems', 'totalPedidosCantidad', 'mesas'));
 
+    }
+
+    public function viewAll()
+    {
+        $this->Orden->recursive = 0;
+        $ordens = $this->paginate('Orden');
+        $this->set('ordens', $ordens);
     }
 
 

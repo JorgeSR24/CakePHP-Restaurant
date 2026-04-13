@@ -19,6 +19,7 @@
 			); ?>
 		</li>
 		<li class="nav-item"><?php echo $this->Html->link('Categorías de Platos', array('controller' => 'CategoriaPlatillos', 'action' => 'index'), array('class' => 'nav-link')); ?></li>
+		<li class="nav-item"><?php echo $this->Html->link('Lista de Ordenes', array('controller' => 'Ordens', 'action' => 'viewAll'), array('class' => 'nav-link')); ?></li>
 		<li class="nav-item"><?php echo $this->Html->link('Pedidos', array('controller' => 'Pedidos', 'action' => 'index'), array('class' => ' btn btn-success navbar-btn')); ?></li>
 	</ul>
 </header>
