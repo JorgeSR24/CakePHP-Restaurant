@@ -17,7 +17,7 @@ $this->Paginator->options(array(
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Mesa</th>
                 <th><?php echo $this->Paginator->sort('Nombre Cliente'); ?></th>
                 <th>Platillo ID</th>
                 <th>Cantidad</th>
@@ -27,7 +27,7 @@ $this->Paginator->options(array(
         <tbody>
             <?php foreach ($ordens as $orden): ?>
                 <tr>
-                    <td><?php echo $orden['Orden']['mesa_id']; ?></td>
+                    <td><?php echo $orden['Mesa']['codigo']; ?></td>
                     <td><?php echo $orden['Orden']['cliente']; ?></td>
                     <td><?php echo $orden['Orden']['dni']; ?></td>
                     <td><?php echo $orden['Orden']['total']; ?></td>

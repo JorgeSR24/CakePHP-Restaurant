@@ -3,7 +3,7 @@
 
 class Mesa extends AppModel {  
 
-public $displayField = 'codigo';
+    public $displayField = 'codigo';
 
     public $belongsTo = array(
         'Mesero' => array(
